@@ -5,6 +5,7 @@ require_relative '../redminerb'
 require_relative 'cli/users'
 require_relative 'cli/issues'
 require_relative 'cli/projects'
+require_relative 'cli/time_entries'
 
 module Redminerb
   # Thor's command class
@@ -26,5 +27,7 @@ module Redminerb
     subcommand 'issues', Cli::Issues
     desc 'projects [list|<id>]', "Manage Redmine's projects"
     subcommand 'projects', Cli::Projects
+    desc 'time_entries [list|<id>]', "Manage Redmine's time isues"
+    subcommand 'time_entries', Cli::TimeEntries
   end
 end
